@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <script>
+    $Lightning.use("c:Modalwinlightningout",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:Modal2", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                    alert('Lightning Out App has loaded!');
+                }
+            );
+        },
+        'https://wimdev-testdomain.cs50.force.com'  // Community endpoint
+    );
+</script>
